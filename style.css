@@ -1,3 +1,153 @@
-h1 {
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10%;
+    align-items: center;
+}
+
+.navbar .logo-me {
+    margin-right: auto;
+}
+
+.navbar .nav-site {
+    display: flex;
+    margin: 3%;
+    padding: 2%;
+    border-radius: 1rem;
+    background: linear-gradient(14deg, rgba(240,240,240,1) 0%, rgba(220,233,232,1) 50%, rgba(171,205,201,1) 100%); 
+}
+
+
+ .skills, .about-me {
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a:hover {
+    color: azure;
+}
+
+
+/* about me */
+.programmer-svg {
+    display: flex;
+    justify-content: center;
+}
+
+.programmer-svg > img {
+    width: 60%;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+
+.about-container .site-about {
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    line-height: 2;
+}
+
+.image-me {
+    margin: 0% 12%;
+}
+
+.image-me > img {
+    border-radius: 50px;
+    box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, .2);
+}
+
+.content-about > p {
+    font-size: 25px;
+}
+
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.skills-container .skill-me {
+    width: 80%;
+    padding: 2%;
+    box-shadow: 0px 8px 16px 3px rgba(49, 49, 49, 0.2);
+    background-color: ghostwhite;
+    margin-bottom: 5%;
+}
+
+.skill-me > h3 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 5;
+}
+
+.skill-me > .programming-languages {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+
+.skill-me > .description {
+    width: 60%;
+    text-align: end;
+    margin-left: auto;
+    margin-bottom: 5%;
+    line-height: 2;
+    padding: 5%;
+    margin-right: 20%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 16px 2px rgba(46, 46, 46, 0.2);
+}
+
+/* footer */
+.contact-svg {
+    width: 50%;
+}
+
+.contact-container {
+    line-height: 2;
+    height: 255px;
+}
+
+.contact-container > .icon-media {
     text-align: center;
 }
+
+.contact-container .contact-me {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.contact-me .connect {
+    line-height: 3;
+}
+
+.date-time {
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+    background-color: rgb(4, 77, 75);
+}
+
