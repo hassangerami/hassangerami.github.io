@@ -26,32 +26,7 @@
                     <a href="#contact" class="nav-link">تماس با من</a>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </nav>
-
-        <script>
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".nav-menu");
-            const navLink = document.querySelector(".nav-link");
-
-            hamburger.addEventListener("click", mobileMenu);
-            navLink.addEventListener("click", closeMenu);
-
-            function mobileMenu() {
-                hamburger.classList.toggle("active");
-                navMenu.classList.toggle("active");
-            }
-
-            function closeMenu () {
-                hamburger.classList.remove("active");
-                navMenu.classList.remove("active");
-            }
-        </script>
-
         
     </header>
     <!-- End Navbar -->
