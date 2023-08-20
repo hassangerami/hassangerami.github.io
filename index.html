@@ -9,32 +9,52 @@
 </head>
 <body>
 
-    <header>
-        <!-- Start Navbar -->
-        <section class="navbar">
-
-            <div class="logo-me">
-                <a href="/">
-                    <img src="/image/logo.png" alt="logo" width="200">
-                </a>
+    <!-- Start Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="nav-logo">
+                <img src="image/logo.png" alt="logo" width="300">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">درباره من</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">مهارت ها</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">تماس با من</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+        </nav>
 
-            <div class="nav-site">
-            
-                <div class="contact">
-                    <a href="#contact">راه های ارتباطی با من</a>
-                </div>
-                <div class="skills">
-                    <a href="#skills">مهارت های من</a>
-                </div>
-                <div class="about-me"> 
-                    <a href="#about">درباره من</a>
-                </div>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLink = document.querySelector(".nav-link");
 
-            </div>
-        </section>
-        <!-- End Navbar -->
+            hamburger.addEventListener("click", mobileMenu);
+            navLink.addEventListener("click", closeMenu);
+
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+
+            function closeMenu () {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }
+        </script>
+
+        
     </header>
+    <!-- End Navbar -->
 
     
     <main>
@@ -62,7 +82,7 @@
         <!-- End About Me -->
 
         <!-- Start Skills -->
-        <div class="programmer-svg">
+        <div class="programmer-svg" id="pana">
             <img src="svg/Product iteration-pana.svg" alt="skill">
         </div>
 
@@ -75,13 +95,17 @@
                     <img src="svg/html.svg" alt="html-logo">
                     <img src="svg/python.svg" alt="python-logo">
                     <img src="svg/css.svg" alt="css-logo">
+                    <img src="svg/linux.svg" alt="linux">
                 </div> 
                 <div class="description">
-                    <p>مسلط به زبان برنامه نویسی پایتون</p>
-                    <p>django framework کدنویسی برنامه های وب با</p>
-                    <p>HTML5 & CSS3 مسلط به زبان های</p>
-                    <p>تسلط به دستورات هسته لینوکس در سیستم عامل اوبونتو</p>
-                    <p> postgreSQL آشنا به دیتابیس های رابطه ای مانند</p>
+                    <div class="tech">
+                        <p>Python programming language</p>
+                        <p>django web framework</p>
+                        <p>HTML5 & CSS3</p>
+                        <p>Commands linux and ubuntu</p>
+                        <p> postgreSQL database</p>
+                    </div>
+                    <img src="svg/Firmware-amico.svg" alt="" id="firmware">
                 </div>
 
             </div>

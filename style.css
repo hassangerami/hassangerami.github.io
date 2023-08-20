@@ -6,41 +6,105 @@
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10%;
-    align-items: center;
-}
-
-.navbar .logo-me {
-    margin-right: auto;
-}
-
-.navbar .nav-site {
-    display: flex;
-    margin: 3%;
-    padding: 2%;
-    border-radius: 1rem;
-    background: linear-gradient(14deg, rgba(240,240,240,1) 0%, rgba(220,233,232,1) 50%, rgba(171,205,201,1) 100%); 
-}
-
-
- .skills, .about-me {
-    margin-left: 50px;
+li {
+    list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
 }
 
-a:hover {
-    color: azure;
+.header {
+    border-bottom: 1px solid #E2E8F0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;   
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover {
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 850px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-logo > img {
+        width: 200px;
+    }
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 400px) {
+    .nav-logo {
+       margin-left: -20%;
+    }
+}
 
 /* about me */
 .programmer-svg {
@@ -79,6 +143,39 @@ a:hover {
     font-size: 25px;
 }
 
+@media only screen and (max-width: 850px) {
+    .site-about {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-me > img {
+        width: 80%;
+        margin-right: 5%;
+    }
+    .content-about {
+        padding: 5%;
+        color: #101010;
+    }
+    .content-about > p {
+        font-size: 20px;
+    }
+    #pana > img {
+        opacity: 0.1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .content-about > p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #pana > img {
+        opacity: 1;
+    }
+}
+
 
 /* Skills */
 .skills-container {
@@ -109,19 +206,65 @@ a:hover {
 
 
 .skill-me > .description {
-    width: 60%;
-    text-align: end;
-    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 70%; 
+    margin: 0% auto;
     margin-bottom: 5%;
     line-height: 2;
     padding: 5%;
-    margin-right: 20%;
     border-radius: 10px;
     box-shadow: 1px 2px 16px 2px rgba(46, 46, 46, 0.2);
 }
 
+.description > #firmware {
+    width: 25%;
+}
+
+@media only screen and (max-width: 850px) {
+    .skill-me {
+        margin-top: 10%;
+    }
+    .skill-me > h3 {
+        font-size: 20px;
+    }
+    .programming-languages > img {
+        width: 20%;
+    }
+    .skill-me > .description {
+        width: 80%;
+        margin-right: auto;
+    }
+    .description > .tech {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skills-container .skill-me  {
+        width: 90%;
+    }
+    .skill-me > h3 {
+        font-size: 15px;
+    }
+    .programming-languages > img {
+        width: 15%;
+    }
+    .description {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 372px) {
+    .skill-me > h3 {
+        font-size: 12px;
+    }
+}
+
 /* footer */
-.contact-svg {
+.contact-svg > img {
     width: 50%;
 }
 
@@ -151,3 +294,8 @@ a:hover {
     background-color: rgb(4, 77, 75);
 }
 
+@media only screen and (max-width: 440px) {
+    .contact-me > .connect {
+        font-size: 70%;
+    }   
+}
